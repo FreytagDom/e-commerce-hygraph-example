@@ -6,13 +6,11 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Link href="/">
-        <a>
-          <div className={styles.logo}>
-            <p>
-              Books <span className={styles.logo_span}>☘</span>
-            </p>
-          </div>
-        </a>
+        <div className={styles.logo}>
+          <p>
+            Books <span className={styles.logo_span}>☘</span>
+          </p>
+        </div>
       </Link>
       <div className="nav-price snipcart-checkout">
         <span>🛒</span>

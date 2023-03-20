@@ -20,11 +20,9 @@ export default function Home({ allBooks }) {
             return (
               <div className={styles.product_card} key={product.id}>
                 <Link href={`books/${product.slug}`}>
-                  <a>
-                    <div className={styles.product_img}>
-                      <img src={product.image.url} alt={product.name} />
-                    </div>
-                  </a>
+                  <div className={styles.product_img}>
+                    <img src={product.image.url} alt={product.name} />
+                  </div>
                 </Link>
                 <div className={styles.product_content}>
                   <h3>{product.name}</h3>

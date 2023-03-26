@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-
 import styles from "../styles/Home.module.css";
-
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 export default function Home({ allBooks }) {
@@ -11,7 +9,7 @@ export default function Home({ allBooks }) {
       <Head>
         <title>Books | Home</title>
       </Head>
-      <div className="container">
+      <div className={styles.container}>
         <h2 className={styles.title}>
           All Books <span>📙</span>
         </h2>
@@ -20,8 +18,21 @@ export default function Home({ allBooks }) {
             return (
               <div className={styles.product_card} key={product.id}>
                 <Link href={`books/${product.slug}`}>
-                  <div className={styles.product_img}>
-                    <img src={product.image.url} alt={product.name} />
+                  <div className={styles.flip_card}>
+                    <div className={styles.flip_card_inner}>
+                      <div className={styles.flip_card_back}>
+                        <p className={styles.titles}>
+                          {product.beschreibung.text}
+                        </p>
+                      </div>
+                      <div className={styles.product_img}>
+                        <img
+                          className={styles.flip_card_front}
+                          src={product.image.url}
+                          alt={product.name}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </Link>
                 <div className={styles.product_content}>
@@ -63,6 +74,9 @@ export async function getStaticProps() {
           price
           image {
             url
+          }
+          beschreibung {
+            text
           }
         }
       }

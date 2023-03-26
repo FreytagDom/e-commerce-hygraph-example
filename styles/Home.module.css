@@ -8,11 +8,13 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
+	width: clamp (60px, 80%, 120px);
 }
 
 @media (max-width: 500px) {
 	.products_container {
 		grid-template-columns: 1fr;
+		
 	}
 }
 
@@ -23,7 +25,7 @@
 .product_img {
 	background-color: #fff;
 	height: 300px;
-	width: 80%;
+	width: clamp (80px 80%, 110px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -34,3 +36,70 @@
 .product_content h3 {
 	margin: 5px 0;
 }
+.flip_card {
+	background-color: transparent;
+	width: 190px;
+	perspective: 100px;
+	font-family: sans-serif;
+  }
+  
+  .titles {
+	font-size: 1.2em;
+	font-weight: 40;
+	text-align: center;
+	margin: 0;
+	z-index: 2;
+	color: blue;
+	justify-content: center;
+	
+  }
+  
+  .flip_card_inner {
+	position: relative;
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  .flip_card:hover .flip_card_inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip_card_front, .flip_card_back {
+	box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 95%;
+	height: 80%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	align-items: center;
+	border-radius: 3px;
+	cursor: pointer;
+	border-radius: 1rem;
+  }
+  
+  .flip_card_front {
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	border-radius: 3px;
+	cursor: pointer;
+	
+  }
+  
+  .flip_card_back {
+	background: linear-gradient(120deg, rgb(226, 159, 135) 30%, coral 88%,
+	   bisque 40%, rgb(255, 185, 160) 78%);
+	color: rgb(210, 196, 196);
+	transform: rotateY(180deg);
+	display: flex;
+	justify-content: center;
+	
+	border-radius: 3px;
+	
+  }

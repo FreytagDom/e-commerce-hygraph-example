@@ -21,32 +21,23 @@ export default function Home({ allBooks }) {
                 <Link href={`books/${product.slug}`}>
                   <div className={styles.flip_card}>
                     <div className={styles.flip_card_inner}>
+                      <div className={styles.flip_card_front}>
+                        <Image
+                          className={styles.product_img}
+                          src={product.image.url}
+                          alt={product.name}
+                          width={120}
+                          height={220}
+                        />
+                      </div>
                       <div className={styles.flip_card_back}>
                         <p className={styles.titles}>
                           {product.beschreibung.text}
                         </p>
                       </div>
-                      <div className={styles.product_img}>
-                        <Image
-                          className={styles.flip_card_front}
-                          src={product.image.url}
-                          alt={product.name}
-                          width={80}
-                          height={120}
-                        />
-                      </div>
                     </div>
                   </div>
                 </Link>
-                <div className={styles.flip_card}>
-                  <div className={styles.flip_card_inner}>
-                    <div className={styles.flip_card_back}>
-                      <p className={styles.titles}>
-                        {product.beschreibung.text}
-                      </p>
-                    </div>
-                  </div>
-                </div>
                 <div className={styles.product_content}>
                   <h3>{product.name}</h3>
                   <p>€{product.price}</p>

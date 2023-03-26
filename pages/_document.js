@@ -10,7 +10,10 @@ export default function Document() {
           rel="stylesheet"
           href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
         />
-        <script src="https://www.paypal.com/sdk/js?client-id=AToOdAXgXQV-L6ueUybXD_IB348s-272JMC_Y9pAttaGUNw73cJnrsr4DRipBJyv1qhcasbiXYP2nm9d"></script>
+        <script
+          src="https://www.paypal.com/sdk/js?client-id=AToOdAXgXQV-L6ueUybXD_IB348s-272JMC_Y9pAttaGUNw73cJnrsr4DRipBJyv1qhcasbiXYP2nm9d"
+          async
+        ></script>
       </Head>
 
       <body>

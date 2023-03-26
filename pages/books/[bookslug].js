@@ -1,7 +1,6 @@
 import Head from "next/head";
-
 import styles from "../../styles/SingleProduct.module.css";
-
+import Image from "next/image";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Link from "next/link";
 
@@ -13,7 +12,13 @@ const singlebook = ({ book }) => {
       </Head>
       <div className={styles.single_container}>
         <div className={styles.left_section}>
-          <img src={book.image.url} className={styles.left_img} alt="" />
+          <Image
+            src={book.image.url}
+            className={styles.left_img}
+            alt=""
+            width={80}
+            height={120}
+          />
         </div>
         <div className={styles.right_section}>
           <h3 className={styles.title}>{book.name}</h3>

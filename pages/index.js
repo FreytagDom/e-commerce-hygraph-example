@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import Image from "next/image";
 
 export default function Home({ allBooks }) {
   return (
@@ -26,10 +27,12 @@ export default function Home({ allBooks }) {
                         </p>
                       </div>
                       <div className={styles.product_img}>
-                        <img
+                        <Image
                           className={styles.flip_card_front}
                           src={product.image.url}
                           alt={product.name}
+                          width={80}
+                          height={120}
                         />
                       </div>
                     </div>

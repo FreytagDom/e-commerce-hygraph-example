@@ -8,7 +8,7 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-	width: clamp (60px, 80%, 120px);
+	width: clamp (100px, 80%, 160px);
 }
 
 @media (max-width: 500px) {
@@ -24,7 +24,7 @@
 
 .product_img {
 	background-color: #fff;
-	height: 300px;
+	height: 200px;
 	width: clamp (80px 80%, 110px);
 	display: flex;
 	justify-content: center;
@@ -38,9 +38,11 @@
 }
 .flip_card {
 	background-color: transparent;
-	width: 190px;
-	perspective: 100px;
+	width: 120px;
+	height: 150px;
+	perspective: 180px;
 	font-family: sans-serif;
+	margin-left: 20px;
   }
   
   .titles {
@@ -89,17 +91,15 @@
 	justify-content: center;
 	border-radius: 3px;
 	cursor: pointer;
-	
   }
   
   .flip_card_back {
-	background: linear-gradient(120deg, rgb(226, 159, 135) 30%, coral 88%,
-	   bisque 40%, rgb(255, 185, 160) 78%);
+  background: linear-gradient(120deg, rgb(226, 159, 135) 30%, coral 88%,
+  bisque 40%, rgb(255, 185, 160) 78%);
 	color: rgb(210, 196, 196);
 	transform: rotateY(180deg);
 	display: flex;
 	justify-content: center;
-	
 	border-radius: 3px;
 	
   }

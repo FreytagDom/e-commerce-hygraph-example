@@ -11,9 +11,9 @@ export default function Home({ allBooks }) {
         <title>Books | Home</title>
       </Head>
       <div className={styles.container}>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
           All my Books <span>📙</span>
-        </h2>
+        </h1>
         <div className={styles.products_container}>
           {allBooks.map((product) => {
             return (

@@ -12,7 +12,7 @@ export default function Home({ allBooks }) {
       </Head>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          All Books <span>📙</span>
+          All my Books <span>📙</span>
         </h2>
         <div className={styles.products_container}>
           {allBooks.map((product) => {
